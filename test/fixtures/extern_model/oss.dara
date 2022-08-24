@@ -1,0 +1,45 @@
+model MyModel {
+
+}
+
+enum Config: string {
+    SourceId(value='id')
+};
+
+init();
+
+function putObject(a: string): MyModel {
+  return new MyModel{};
+}
+
+function putObjectStr(a: string): string {
+  return a;
+}
+
+static function staticPutObject(): MyModel {
+  return new MyModel{};
+}
+
+static function staticPutObjectStr(): string {
+  return 'string';
+}
+
+
+static function staticPutObjectMap(): map[string]string {
+  return {
+    str = 'test'
+  };
+}
+
+function putObjectMap(a: map[string] string): map[string] string {
+  return a;
+}
+
+
+static function staticPutObjectEnum(): Config {
+  return Config;
+}
+
+function putObjectEnum(): Config {
+  return Config;
+}

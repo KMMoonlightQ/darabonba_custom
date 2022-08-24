@@ -1,0 +1,8 @@
+import OSS
+import Source
+
+model Config{};
+
+init(config1: Source.Config, config2: OSS.Config) {
+  var conf = new Config;
+}

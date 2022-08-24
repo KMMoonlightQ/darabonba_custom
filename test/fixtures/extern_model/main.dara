@@ -1,0 +1,13 @@
+import OSS
+
+init(){}
+
+function call(): void {
+  var oss = new OSS();
+  oss.putObject("string");
+  oss.putObjectStr("string");
+  oss.putObjectMap({
+    test = 'test'
+  });
+  oss.putObjectEnum();
+}
